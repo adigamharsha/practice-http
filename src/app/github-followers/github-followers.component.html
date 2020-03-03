@@ -1,0 +1,16 @@
+<ul class="list-group">
+    <li *ngFor="let post of followers" class="list-group-item">
+        <div class="media">
+            <img src="{{post.avatar_url}}" alt="..." class="rounded-circle" width="200" height="200"><img>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">
+                <a [routerLink]="['/followers', post.id]">
+                    {{post.login}}
+                </a>
+            </h4>
+            <a [routerLink]="['/followers', post.id]" class="stretched-link">{{post.html_url}}</a>
+        </div>
+
+    </li>
+</ul>
